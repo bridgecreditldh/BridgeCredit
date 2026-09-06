@@ -15,7 +15,7 @@ export default function ContactForm() {
     setStatus("sending");
     try {
       const formData = new FormData(e.currentTarget);
-      formData.append("access_key", "8202b08b-87d4-4aeb-b731-a94c55054592");
+      formData.append("access_key", "b8a0d3bd-a49f-4eb3-ac24-32ee8bc26563");
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
         body: formData,
