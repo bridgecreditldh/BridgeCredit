@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b2545;
+  --royal: #1d4ed8;
+  --royal-deep: #14329c;
+  --ink: #10192b;
+  --paper: #f6f7fb;
+  --paper-blue: #eef2fb;
+  --line: #dfe3ee;
+  --gold: #b08d57;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-royal: var(--royal);
+  --color-royal-deep: var(--royal-deep);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-blue: var(--paper-blue);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --font-display: var(--font-manrope);
+  --font-body: var(--font-inter);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal 0.5s ease-out both;
+  }
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+.container-xl {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--royal);
+  outline-offset: 2px;
+}
